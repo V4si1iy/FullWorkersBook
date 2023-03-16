@@ -19,16 +19,16 @@ public class WorkerControllerStandart {
     }
 
     @GetMapping("/add")
-    public Worker add(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String salary , @RequestParam String department) throws WorkerAlreadyAddedException {
+    public Worker add(String firstName, String lastName, @RequestParam String salary , @RequestParam String department) throws WorkerAlreadyAddedException {
         return workerServiceStandartImpl.add(firstName, lastName , salary ,department);
     }
     @GetMapping("/remove")
-    public Worker remove(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String salary , @RequestParam String department) throws WorkerNotFoundException {
+    public Worker remove(String firstName,  String lastName, @RequestParam String salary , @RequestParam String department) throws WorkerNotFoundException {
         return workerServiceStandartImpl.remove(firstName, lastName , salary , department);
     }
 
     @GetMapping("/search")
-    public Worker search(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String salary , @RequestParam String department)throws WorkerNotFoundException {
+    public Worker search(String firstName,  String lastName, @RequestParam String salary , @RequestParam String department)throws WorkerNotFoundException {
         return workerServiceStandartImpl.search(firstName, lastName , salary , department);
     }
 
