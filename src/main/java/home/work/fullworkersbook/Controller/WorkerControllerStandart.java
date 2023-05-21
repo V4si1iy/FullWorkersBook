@@ -8,6 +8,8 @@ import home.work.fullworkersbook.Service.WorkerServiceStandartImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+
 @RestController
 @AllArgsConstructor
 public class WorkerControllerStandart {
@@ -33,7 +35,7 @@ public class WorkerControllerStandart {
     }
 
     @GetMapping("/getAll")
-    public String getAll() {
+    public Collection<Worker> getAll() {
         return workerServiceStandartImpl.getAll();
     }
 

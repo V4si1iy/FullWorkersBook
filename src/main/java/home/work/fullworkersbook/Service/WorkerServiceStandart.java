@@ -4,8 +4,8 @@ import home.work.fullworkersbook.Data.Department;
 import home.work.fullworkersbook.Data.Worker;
 import org.apache.commons.lang3.StringUtils;
 
-public interface WorkerServiceStandart {
-    String getAll();
+public interface WorkerServiceStandart extends WorkerMain {
+    String getAllString();
     default Worker makeWorker(String firstName, String lastName, String salary, String department)
     {
 

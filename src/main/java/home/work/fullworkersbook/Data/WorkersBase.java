@@ -4,15 +4,19 @@ import home.work.fullworkersbook.Exceptions.WorkerAlreadyAddedException;
 import home.work.fullworkersbook.Exceptions.WorkerNotFoundException;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
+
 
 @Repository
 public class WorkersBase {
     private final List<Worker> storage = new ArrayList<>();
 
+    private Map<Integer, Integer> lol= new HashMap<>();
     public Collection<Worker> getAll() {
+        if(storage == null)
+        {
+            throw new NoSuchElementException();
+        }
         return storage;
     }
 
